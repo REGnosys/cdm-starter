@@ -16,13 +16,12 @@ public class TradeStateTestData {
     }
 
     /**
-     * A helper method to load a sample equity trade state to be used in testing
+     * A helper method to load a sample equity trade state from the test/resources folder to be used in testing.
+     * @return deserialized TradeState object
      */
-    public TradeState equityTradeState() throws IOException {
+    public TradeState getEquityTradeState() throws IOException {
         URL resource = this.getClass().getClassLoader()
-                .getResource("eqs-ex01-single-underlyer-execution-long-form.json");
+                .getResource("equity-trade-state.json");
         return mapper.readValue(resource, TradeState.class);
     }
-
-
 }

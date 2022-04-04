@@ -16,19 +16,14 @@ class TradeStateDataLoaderImplTest {
     @BeforeEach
     void setUp() {
         tradeStateTestData = new TradeStateTestData();
-
         tradeStateDataLoader = new TradeStateDataLoaderImpl();
     }
 
     @Test
-    void tradeDate() throws IOException {
-        TradeState equityTradeState = tradeStateTestData.equityTradeState();
+    void shouldExtractTradeDate() throws IOException {
+        TradeState equityTradeState = tradeStateTestData.getEquityTradeState();
         LocalDate tradeDate = tradeStateDataLoader.getTradeDate(equityTradeState);
+
         Assertions.assertEquals(LocalDate.of(2001, 9, 24), tradeDate);
-
-
     }
-
-
-
 }
