@@ -24,7 +24,7 @@ class TradeStateDataLoaderImplTest {
     void tradeDate() throws IOException {
         TradeState equityTradeState = tradeStateTestData.equityTradeState();
         LocalDate tradeDate = tradeStateDataLoader.getTradeDate(equityTradeState);
-        Assertions.assertEquals(LocalDate.now(), tradeDate);
+        Assertions.assertEquals(LocalDate.of(2001, 9, 24), tradeDate);
 
 
     }

@@ -15,6 +15,9 @@ public class TradeStateTestData {
         this.mapper = RosettaObjectMapper.getNewRosettaObjectMapper();
     }
 
+    /**
+     * A helper method to load a sample equity trade state to be used in testing
+     */
     public TradeState equityTradeState() throws IOException {
         URL resource = this.getClass().getClassLoader()
                 .getResource("eqs-ex01-single-underlyer-execution-long-form.json");
